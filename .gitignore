@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# testing
+coverage
+junit.xml
+
+# production
+build
+
+# misc
+.DS_Store
+npm-debug.log
+consoleScripts.js
+.env.local

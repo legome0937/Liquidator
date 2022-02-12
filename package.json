@@ -1,0 +1,57 @@
+{
+  "name": "liquidator",
+  "version": "3.0.0",
+  "description": "Microservice to bid on dYdX closing auctions",
+  "main": "build/src/index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --runInBand",
+    "coverage": "NODE_ENV=test jest --coverage --runInBand --forceExit",
+    "build": "rm -rf build/ && tsc",
+    "start": "node build/src/index.js",
+    "lint": "eslint . --ext .js --ignore-path .gitignore",
+    "compose-clean": "docker-compose rm -f",
+    "migrate": "echo 'Nothing to migrate'",
+    "seed": "echo 'Nothing to seed'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dydxprotocol/liquidator.git"
+  },
+  "author": "dYdX Trading Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dydxprotocol/liquidator/issues"
+  },
+  "homepage": "https://github.com/dydxprotocol/liquidator#readme",
+  "dependencies": {
+    "@dydxprotocol/solo": "^0.38.2",
+    "dotenv-flow": "^0.4.0",
+    "lodash": "^4.17.15",
+    "lru-cache": "^5.1.1",
+    "luxon": "^1.25.0",
+    "request-promise-native": "^1.0.8",
+    "winston": "^3.2.1",
+    "winston-transport": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "coveralls": "^3.0.9",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-jest": "^22.21.0",
+    "jest": "^26.3.0",
+    "jest-junit": "^10.0.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.8.3"
+  }
+}
